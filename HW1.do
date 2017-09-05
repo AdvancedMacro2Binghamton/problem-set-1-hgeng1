@@ -7,6 +7,7 @@
  
  *Gini index
  ginidesc var12
+ * with some errors but do not know how to fixed it 
  
  * Lorenz Curve
  glcurve var12, gl(gl) p(p) lorenz nograph
