@@ -1,4 +1,14 @@
  *DATA MANAGEMENT
+ ***Delete duplicate lines
+ sort YY1
+ quietly by YY1:gen dup=cond(_N==1,0,_n)
+ tabulate dup
+ drop if dup>1
+ 
+ ***Generate EARNINGS INCOME WEALTH
+ gen EARNINGS= wageinc+0.863* bussefarminc
+ gen wealth=networth
+ gen INCOME=income
  
  * Most statistic values
  tabstat var6 var6_01 var12, statistics(min max mean sd variance cv p1 p5 p10 median p75 p90 p95 p99)
