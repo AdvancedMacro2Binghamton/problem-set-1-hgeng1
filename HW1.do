@@ -48,11 +48,11 @@
  ineqdec0 WEALTH [aweight=wgt]
 
  *******************Lorenz Curve**************************
- glcurve EARNING [aweight=wgt] if EARNING>0, gl(gl_e) p(p_e) lorenz nograph
+ glcurve EARNING [aweight=wgt] if EARNING>=0, gl(gl_e) p(p_e) lorenz nograph
  twoway line gl_e p_e , sort || line p_e p_e ,xlabel(0(.1)1) ylabel(0(.1)1) xline(0(.2)1) yline(0(.2)1) title("Lorenz curve of Earning") legend(label(1 "Lorenz curve") label(2 "Line of perfect equality")) plotregion(margin(zero)) aspectratio(1) scheme(economist)
 
- glcurve INCOME [aweight=wgt] if INCOME>0, gl(gl_i) p(p_i) lorenz nograph
+ glcurve INCOME [aweight=wgt] if INCOME>=0, gl(gl_i) p(p_i) lorenz nograph
  twoway line gl_i p_i , sort || line p_i p_i ,xlabel(0(.1)1) ylabel(0(.1)1) xline(0(.2)1) yline(0(.2)1) title("Lorenz curve of Income") legend(label(1 "Lorenz curve") label(2 "Line of perfect equality")) plotregion(margin(zero)) aspectratio(1) scheme(economist)
 
- glcurve WEALTH [aweight=wgt] if WEALTH>0, gl(gl_w) p(p_w) lorenz nograph
+ glcurve WEALTH [aweight=wgt] if WEALTH>=0, gl(gl_w) p(p_w) lorenz nograph
  twoway line gl_w p_w , sort || line p_w p_w ,xlabel(0(.1)1) ylabel(0(.1)1) xline(0(.2)1) yline(0(.2)1) title("Lorenz curve of Wealth") legend(label(1 "Lorenz curve") label(2 "Line of perfect equality")) plotregion(margin(zero)) aspectratio(1) scheme(economist)
